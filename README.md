@@ -8,6 +8,7 @@ This plugin uses Oxide's permission system. To assign a permission, use oxide.gr
 ## Configuration
 The settings and options for this plugin can be configured in the GestureWheel.json file under the oxide/config directory. The use of a JSON editor or validation site such as jsonlint.com is recommended to avoid formatting issues and syntax errors.
 
+```json
 {
   "Command": "gestures",
   "Use Permission": false,
@@ -46,9 +47,11 @@ The settings and options for this plugin can be configured in the GestureWheel.j
     }
   ]
 }
+```
 
-Preview
+## Preview
+![](https://i.imgur.com/PGvdmqZ.png)
 
-Credits
-
+## Credits
+    Tricky - Maintenance up to 0.1.3
     Mevent - Initial development.

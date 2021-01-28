@@ -1,5 +1,10 @@
 Gesture Wheel allows players to have a convenient wheel that provide them the ability to use gestures.
 
+## Usage
+The plugin is preset to use Shift-RightClick to bring up the menu.  This cannot currently be customized, but should be relatively inconspicuous and conflict-free.  Let me know...
+
+Once the player has clicked on the X to close or one of the gestures, the menu will close.
+
 ## Permissions
 This plugin uses Oxide's permission system. To assign a permission, use oxide.grant <user or group> <name or steam id> <permission>. To remove a permission, use oxide.revoke <user or group> <name or steam id> <permission>.
 

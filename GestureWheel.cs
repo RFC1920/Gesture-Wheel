@@ -11,7 +11,7 @@ using Color = UnityEngine.Color;
 
 namespace Oxide.Plugins
 {
-    [Info("Gesture Wheel", "Tricky & Mevent, RFC1920", "0.1.4")]
+    [Info("Gesture Wheel", "Tricky & Mevent, RFC1920", "0.1.5")]
     [Description("Convenient wheel that provides the ability to use gestures")]
 
     public class GestureWheel : RustPlugin
@@ -35,6 +35,9 @@ namespace Oxide.Plugins
             [JsonProperty(PropertyName = "Button Radius")]
             public int ButtonRadius = 100;
 
+            [JsonProperty(PropertyName = "Key Activation Code")]
+            public int ActivationCode = 2176;
+
             [JsonProperty(PropertyName = "Close Button Color")]
             public string CloseButtonColor = "#FFB6B3DE";
 
@@ -52,37 +55,31 @@ namespace Oxide.Plugins
                     Name = "wave",
                     Image = "https://i.imgur.com/pB3iZer.png"
                 },
-
                 new Gesture
                 {
                     Name = "victory",
                     Image = "https://i.imgur.com/PLbSgED.png"
                 },
-
                 new Gesture
                 {
                     Name = "shrug",
                     Image = "https://i.imgur.com/A3hHcgV.png"
                 },
-
                 new Gesture
                 {
                     Name = "thumbsup",
                     Image = "https://i.imgur.com/yWuhCMu.png"
                 },
-
                 new Gesture
                 {
                     Name = "chicken",
                     Image = "https://i.imgur.com/Qxhjf6N.png"
                 },
-
                 new Gesture
                 {
                     Name = "hurry",
                     Image = "https://i.imgur.com/vVKVeha.png"
                 },
-
                 new Gesture
                 {
                     Name = "whoa",
@@ -168,8 +165,9 @@ namespace Oxide.Plugins
             if (player == null || input == null) return;
             //if(input.current.buttons > 0)
             //    Puts($"OnPlayerInput: {input.current.buttons}");
-            // Shift-RightClick
-            if (input.current.buttons == 2176)
+            // Shift-RightClick == 2176, our default.  Uncomment the above TWO lines and reload to search for the best choice for your players.
+            // Definitely comment these again or face the wrath of khan!!!!
+            if (input.current.buttons == config.ActivationCode)
             {
                 Players.Remove(player.userID);
                 player.SendConsoleCommand("gestures");

@@ -18,6 +18,7 @@ The settings and options for this plugin can be configured in the GestureWheel.j
   "Command": "gestures",
   "Use Permission": false,
   "Button Radius": 100,
+  "ActivationCode": 2176,
   "Close Button Color": "#FFB6B3DE",
   "Gesture Button Color": "#FF6666DE",
   "Gesture Button Size": 50,
@@ -53,6 +54,8 @@ The settings and options for this plugin can be configured in the GestureWheel.j
   ]
 }
 ```
+
+ActivationCode defaults to 2176, which is Shift-RightClick.  This can be customized in the configuration now.  For the brave, there are notes in the code about how to find a new one, or ask...
 
 ## Preview
 ![](https://i.imgur.com/PGvdmqZ.png)
